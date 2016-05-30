@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <style>
+        #parent {
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            background: #670000;
+        }
+        
+        #children {
+            background: #006700;
+            height: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="children"></div>
+    </div>
+    <script type="text/javascript">
+        var body = document.getElementById("parent");
+        var hand = document.getElementById("children");
+
+        body.addEventListener("click", function(e) {
+            console.log("fuck your body!");
+        }, false);
+        hand.addEventListener("click", function(e) {
+            console.log("fuck your hand!");
+        }, true);
+
+    </script>
+</body>
+
+</html>
